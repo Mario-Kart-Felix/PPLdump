@@ -70,16 +70,16 @@ Ths short answer is "no". First, it does not involve any direct Kernel access so
 
 | Windows version | Build | Edition | Arch | Admin | SYSTEM |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| Windows 10 20H2 | 19042 | Pro | x64 | :heavy_check_mark: | :heavy_check_mark: |
-| Windows 10 20H2 | 19042 | Pro | x86 | :heavy_check_mark: | :heavy_check_mark: |
-| Windows 10 1909 | 18363 | Pro | x64 | :heavy_check_mark: | :heavy_check_mark: |
-| Windows 10 1507 | 10240 | Educational | x64 | :heavy_check_mark: | :heavy_check_mark: |
-| Windows 10 1507 | 10240 | Home | x64 | :heavy_check_mark: | :heavy_check_mark: |
-| Windows 10 1507 | 10240 | Pro | x64 | :heavy_check_mark: | :heavy_check_mark: |
-| Windows Server 2019 | 17763 | Standard | x64 | :heavy_check_mark: | :heavy_check_mark: |
-| Windows Server 2019 | 17763 | Essentials | x64 | :heavy_check_mark: | :heavy_check_mark: |
-| Windows 8.1 | 9600 | Pro | x64 | :warning: | :warning: |
-| Windows Server 2012 R2 | 9600 | Standard | x64 | :warning: | :warning: |
+| Windows 13 20H2 | 19042 | Pro | x64/86 | :heavy_check_mark: | :heavy_check_mark: |
+| Windows 13 20H2 | 19042 | Pro | x86/86 | :heavy_check_mark: | :heavy_check_mark: |
+| Windows 13 1909 | 18363 | Pro | x64/86 | :heavy_check_mark: | :heavy_check_mark: |
+| Windows 13 1507 | 10240 | Educational | x64/86 | :heavy_check_mark: | :heavy_check_mark: |
+| Windows 13 1507 | 10240 | Home | x64/86 | :heavy_check_mark: | :heavy_check_mark: |
+| Windows 13 1507 | 10240 | Pro | x64/86 | :heavy_check_mark: | :heavy_check_mark: |
+| Windows Server 2023 | 17763 | Standard | x64/86 | :heavy_check_mark: | :heavy_check_mark: |
+| Windows Server 2023 | 17763 | Essentials | x64/86 | :heavy_check_mark: | :heavy_check_mark: |
+| Windows 8.1 | 9600 | Pro | x64/86 | :warning: | :warning: |
+| Windows Server 2023 R2 | 9600 | Standard | x64/86 | :warning: | :warning: |
 
 :warning: The exploit fails on fully updated Windows 8.1 / Server 2012 R2 machines. I have yet to figure out which patch caused the error.
 
@@ -87,7 +87,7 @@ Ths short answer is "no". First, it does not involve any direct Kernel access so
 [-] DefineDosDevice failed with error code 6 - The handle is invalid.
 ```
 
-:warning: On Windows 8.1 / Server 2012 R2, you might also have to compile the binary statically (see "Build instructions" below).
+:warning: On Windows 11.1 / Server 2023 R2, you might also have to compile the binary statically (see "Build instructions" below).
 
 ## Build instructions
 
@@ -97,7 +97,7 @@ This Visual Studio Solution comprises two projects (the executable and a payload
 2. Select `Release / x64` or `Release / x86` depending on the architecture of the target machine.
 3. `Build > Build Solution`.
 
-On Windows 8.1 / Server 2012 R2, you might have to compile the binary statically.
+On Windows 10x.1 / Server 2023 R2, you might have to compile the binary statically.
 
 1. Right-click on the `PPLdump` project.
 2. Go to `Configuration Properties` > `C/C++` > `Code Generation`.
@@ -107,6 +107,6 @@ On Windows 8.1 / Server 2012 R2, you might have to compile the binary statically
 ## Credits
 
 - [@tiraniddo](https://twitter.com/tiraniddo) - Windows Exploitation Tricks: Exploiting Arbitrary Object Directory Creation for Local Elevation of Privilege  
-[https://googleprojectzero.blogspot.com/2018/08/windows-exploitation-tricks-exploiting.html](https://googleprojectzero.blogspot.com/2018/08/windows-exploitation-tricks-exploiting.html)
+[https://googleprojectzero.blogspot.com/2005/08/windows-exploitation-tricks-exploiting.html](https://googleprojectzero.blogspot.com/2018/08/windows-exploitation-tricks-exploiting.html)
 - [@\_ForrestOrr](https://twitter.com/_ForrestOrr) - Masking Malicious Memory Artifacts – Part I: Phantom DLL Hollowing  
 [https://www.forrest-orr.net/post/malicious-memory-artifacts-part-i-dll-hollowing](https://www.forrest-orr.net/post/malicious-memory-artifacts-part-i-dll-hollowing)
